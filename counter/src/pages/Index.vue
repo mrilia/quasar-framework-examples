@@ -3,8 +3,22 @@
     <div class="box fixed-center text-center">
       <div>
         <h3>{{ counter }}</h3>
-        <q-btn outline round color="primary" icon="remove" size="sm" />
-        <q-btn outline round color="primary" icon="add" size="sm" />
+        <q-btn
+          @click="decreaseCounter()"
+          outline
+          round
+          color="primary"
+          icon="remove"
+          size="sm"
+        />
+        <q-btn
+          @click="increaseCounter()"
+          outline
+          round
+          color="primary"
+          icon="add"
+          size="sm"
+        />
       </div>
     </div>
   </q-page>
@@ -19,11 +33,19 @@ export default defineComponent({
       counter: 0,
     };
   },
+  methods: {
+    increaseCounter() {
+      this.counter++;
+    },
+    decreaseCounter() {
+      this.counter--;
+    },
+  },
 });
 </script>
 <style scoped>
-.box{
-  width:200px;
+.box {
+  width: 200px;
   height: 250px;
   border: 2px solid grey;
 }
