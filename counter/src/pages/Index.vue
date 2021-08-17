@@ -1,17 +1,30 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
+  <q-page>
+    <div class="box fixed-center text-center">
+      <div>
+        <h3>{{ counter }}</h3>
+        <q-btn outline round color="primary" icon="remove" size="sm" />
+        <q-btn outline round color="primary" icon="add" size="sm" />
+      </div>
+    </div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'PageIndex'
-})
+  data() {
+    return {
+      counter: 0,
+    };
+  },
+});
 </script>
+<style scoped>
+.box{
+  width:200px;
+  height: 250px;
+  border: 2px solid grey;
+}
+</style>
