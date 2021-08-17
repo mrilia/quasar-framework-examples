@@ -7,6 +7,7 @@
           @click="decreaseCounter()"
           outline
           round
+          class="absolute-bottom-left q-ma-lg"
           color="primary"
           icon="remove"
           size="sm"
@@ -15,6 +16,7 @@
           @click="increaseCounter()"
           outline
           round
+          class="absolute-bottom-right q-ma-lg"
           color="primary"
           icon="add"
           size="sm"
@@ -47,6 +49,6 @@ export default defineComponent({
 .box {
   width: 200px;
   height: 250px;
-  border: 2px solid grey;
+  border: 2px solid rgb(100, 127, 214);
 }
 </style>
