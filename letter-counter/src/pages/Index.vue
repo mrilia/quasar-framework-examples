@@ -1,7 +1,9 @@
 <template>
   <q-page padding>
-    <input v-model="text" @keyup="calculateLen()" />
-    <p class="text-grey2">Letter count: {{ textLen }}</p>
+    <div class="fixed-center">
+      <q-input outlined label="Type here" v-model="text" @keyup="calculateLen()" />
+      <p class="text-grey">Letter count: {{ textLen }}</p>
+    </div>
   </q-page>
 </template>
 
